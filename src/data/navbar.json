@@ -1,0 +1,14 @@
+[
+	{
+		"text": "Home",
+		"link": "/"
+	},
+	{
+		"text": "Guide",
+		"link": "/guide"
+	},
+	{
+		"text": "Config reference",
+		"link": "/config"
+	}
+]
