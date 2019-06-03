@@ -1,10 +1,5 @@
-// This is where project configuration and plugin options are located. 
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
 module.exports = {
-  siteName: 'Gridsome',
+	siteName: 'Gridsome Docs',
+	siteDescription: "Gridsome-powered static site generator for docs",
   plugins: []
 }
