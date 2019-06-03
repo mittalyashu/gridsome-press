@@ -10,18 +10,24 @@
 			</div>
 		</g-link>
 		<div class="header__navbar">
-			<g-link :to="item.link" v-for="item in navbar" :key="item.text" class="header__navbar-item">
-				{{ item.text.trim() }}
-			</g-link>
+			<div v-for="item in navbar" :key="item.text" class="header__navbar-item">
+				<Link :link="item.link" :external="navLink(item.link)">
+					{{ item.text }}
+				</Link>
+			</div>
 		</div>
 	</header>
 </template>
 
 <script>
-import NavbarItem from "../../data/navbar.json"
+import NavbarItem from "../../data/navbar.json";
+import Link from "../../components/Link";
 
 export default {
 	name: "Header",
+	components: {
+		Link
+	},
 	props: {
 		siteLogo: {
 			type: String,
@@ -37,7 +43,16 @@ export default {
 			return NavbarItem
 		}
 	},
-}
+	methods: {
+		navLink(link) {
+			if (link.includes("http")) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+};
 </script>
 
 <style lang='sass'>
@@ -77,6 +92,7 @@ export default {
 			color: rgb(44, 62, 80)
 
 	&__navbar
+		display: flex
 		margin-left: auto
 
 		.active--exact
@@ -85,11 +101,13 @@ export default {
 
 		&-item
 			margin-left: 1.5rem
-			line-height: 2rem
-			color: #2c3e50
 
-			&:hover
-				margin-bottom: -2px
-				border-bottom: 2px solid #46bd87
+			a
+				line-height: 2rem
+				color: #2c3e50
+
+				&:hover
+					margin-bottom: -2px
+					border-bottom: 2px solid #46bd87
 </style>
 

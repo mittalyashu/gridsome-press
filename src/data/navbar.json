@@ -10,5 +10,9 @@
 	{
 		"text": "Config reference",
 		"link": "/config"
+	},
+	{
+		"text": "GitHub",
+		"link": "https://www.github.com/mittalyashu/gridsome-press"
 	}
 ]
