@@ -1,33 +1,71 @@
 <template>
-  <Layout>
-    
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-    
-    <h1>Hello, world!</h1>
-   
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
+	<Layout>
+		<container width="960px">
+			<div class="home">
+				<div class="home__hero">
+					<g-image
+						alt="Logo"
+						src="~/favicon.png"
+						width="280"
+						class="home__hero-image"
+					/>
 
-    <p class="home-links">
-      <a href="https://gridsome.org/docs" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
+					<h1 class="home__hero-title">Gridsome Docs</h1>
 
-  </Layout>
+					<div class="home__hero-label label">
+						Gridsome-powered static site generator for docs
+					</div>
+
+					<primary-button
+						text="Get Started"
+						link="/guide"
+						class="home__hero-cta"
+					/>
+				</div>
+			</div>
+		</container>
+	</Layout>
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    title: 'Hello, world!'
-  }
-}
-</script>
+import Container from "../layouts/Container";
+import PrimaryButton from "../components/button/PrimaryButton";
 
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
+export default {
+	name: "IndexPage",
+	components: {
+		Container,
+		PrimaryButton,
+	}
+};
+</script>
+<style lang="sass">
+.home
+	padding: 3.6rem 2rem 0px
+	margin-top: 3rem
+	text-align: center
+
+	&__hero
+		&-image
+			margin-bottom: 1.5rem
+
+		&-title
+			margin-top: .3rem
+			margin-bottom: 1.8rem
+			font-size: 3rem
+			font-weight: 600
+			line-height: 1.25
+
+		&-label
+			margin-bottom: 1.8rem
+			margin-left: auto
+			margin-right: auto
+			max-width: 35rem
+			font-size: 1.6rem
+			line-height: 1.3
+			color: #6a8bad
+
+		&-cta
+			margin-bottom: 1.8rem
+
 </style>
