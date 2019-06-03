@@ -1,5 +1,5 @@
 module.exports = {
-	siteName: 'Gridsome Docs',
-	siteDescription: "Gridsome-powered static site generator for docs",
+	siteName: 'Gridsome Vuepress',
+	siteDescription: "Vuepress based Gridsome ⚡ site for docs",
   plugins: []
 }
