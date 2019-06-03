@@ -3553,7 +3553,7 @@ graphql@^14.1.1:
   dependencies:
     iterall "^1.2.2"
 
-gridsome@^0.6.0:
+gridsome@0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.6.3.tgz#d67ab595ac4d210d30e6c975654fa9736a0afd3d"
   integrity sha512-8D7B5d23xkslLmix/o7nnAA75MsQ23U2UgsyxeMKwPBwtm+INxcYKV/qQi0ANlDYhcj5va2wmyiW/wlmeN3E2g==
