@@ -5,8 +5,7 @@
 				<div class="home__hero">
 					<g-image
 						alt="Logo"
-						src="~/favicon.png"
-						width="280"
+						src="~/logo.png"
 						class="home__hero-image"
 					/>
 
@@ -63,6 +62,7 @@ export default {
 	&__hero
 		&-image
 			margin-bottom: 1.5rem
+			width: 280px
 
 		&-title
 			margin-top: .3rem
