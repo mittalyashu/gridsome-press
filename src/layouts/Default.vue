@@ -1,23 +1,23 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
-      </nav>
-    </header>
-    <slot/>
-  </div>
+	<div class="layout">
+		<Header
+			:siteName="$static.metaData.siteName"
+			siteLogo="/assets/static/src/favicon.png"
+		/>
+		<slot />
+		<Footer
+			v-if="footer"
+			:siteName="$static.metaData.siteName"
+			siteLogo="~/assets/static/src/favicon.png"
+		/>
+	</div>
 </template>
 
 <static-query>
 query {
-  metaData {
-    siteName
-  }
+	metaData {
+		siteName
+	}
 }
 </static-query>
 
@@ -28,6 +28,9 @@ body {
   padding:0;
   line-height: 1.5;
 }
+<script>
+import Header from "./partials/Header";
+import Footer from "./partials/Footer";
 
 .layout {
   max-width: 760px;
@@ -35,6 +38,20 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+export default {
+	name: "DefaultLayout",
+	components: {
+		Header,
+		Footer
+	},
+	props: {
+		footer: {
+			type: Boolean,
+			default: true
+		}
+	}
+};
+</script>
 
 .header {
   display: flex;
