@@ -5,11 +5,7 @@
 			siteLogo="/assets/static/src/favicon.png"
 		/>
 		<slot />
-		<Footer
-			v-if="footer"
-			:siteName="$static.metaData.siteName"
-			siteLogo="~/assets/static/src/favicon.png"
-		/>
+		<Footer v-if="footer" :siteName="$static.metaData.siteName" />
 	</div>
 </template>
 
