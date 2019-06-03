@@ -10,10 +10,10 @@
 						class="home__hero-image"
 					/>
 
-					<h1 class="home__hero-title">Gridsome Docs</h1>
+					<h1 class="home__hero-title">{{ $static.metaData.siteName }}</h1>
 
 					<div class="home__hero-label label">
-						Gridsome-powered static site generator for docs
+						{{ $static.metaData.siteDescription }}
 					</div>
 
 					<primary-button
@@ -30,6 +30,15 @@
 	</Layout>
 </template>
 
+<static-query>
+query {
+	metaData {
+		siteName
+		siteDescription
+	}
+}
+</static-query>
+
 <script>
 import Container from "../layouts/Container";
 import PrimaryButton from "../components/button/PrimaryButton";
@@ -44,6 +53,7 @@ export default {
 	}
 };
 </script>
+
 <style lang="sass">
 .home
 	padding: 3.6rem 2rem 0px
