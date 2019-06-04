@@ -12,6 +12,10 @@
 		"link": "/config"
 	},
 	{
+		"text": "Theme",
+		"link": "/theme"
+	},
+	{
 		"text": "GitHub",
 		"link": "https://www.github.com/mittalyashu/gridsome-press"
 	}
