@@ -6,6 +6,14 @@ module.exports = {
 		{
 			use: "@gridsome/source-filesystem",
 			options: {
+				index: ['introduction'],
+				path: "guide/*.md",
+				typeName: 'DocPage'
+			}
+		},
+		{
+			use: "@gridsome/source-filesystem",
+			options: {
 				index: ['readme'],
 				path: "theme/*.md",
 				typeName: 'DocPage'
