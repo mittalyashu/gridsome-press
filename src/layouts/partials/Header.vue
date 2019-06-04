@@ -4,7 +4,7 @@
 
 		</div>
 		<g-link to="/" class="header__site">
-			<g-image :src="siteLogo" class="header__site-logo" />
+			<g-image :src="siteLogo" v-if="siteLogo !== ''" class="header__site-logo" />
 			<div class="header__site-name">
 				{{ siteName }}
 			</div>
