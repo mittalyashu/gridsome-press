@@ -1,0 +1,27 @@
+{
+	"/guide": {
+		"config": {
+			"level": 2
+		},
+		"links": [
+			{
+				"text": "Introduction",
+				"link": "/"
+			},
+			{
+				"text": "Getting Started",
+				"link": "/getting-started"
+			},
+			{
+				"text": "Configuration",
+				"link": "/config"
+			}
+		]
+	},
+	"/theme": {
+		"config": {
+			"sidebar": "auto"
+		},
+		"links": []
+	}
+}
