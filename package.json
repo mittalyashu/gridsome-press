@@ -10,6 +10,6 @@
     "@gridsome/transformer-remark": "^0.3.4",
     "gridsome": "0.7.6",
     "node-sass": "^4.13.0",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^8.0.1"
   }
 }
