@@ -1,6 +1,7 @@
 previewsEnabled: true
 services:
   - type: web
+    name: "gridsome-press"
     env: static
     buildCommand: yarn build
     staticPublishPath: ./dist
