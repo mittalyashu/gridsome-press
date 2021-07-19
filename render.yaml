@@ -1,0 +1,13 @@
+previewsEnabled: true
+services:
+  - type: web
+    env: static
+    buildCommand: yarn build
+    staticPublishPath: ./dist
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: sameorigin
+    envVars:
+      - key: NODE_VERSION
+        value: 12
