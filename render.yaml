@@ -11,4 +11,4 @@ services:
         value: sameorigin
     envVars:
       - key: NODE_VERSION
-        value: 12
+        value: 10
